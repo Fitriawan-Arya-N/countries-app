@@ -4,9 +4,10 @@ import SingleCountry from "./pages/SingleCountry";
 import { HiHome } from 'react-icons/hi'
 import { MdGroup } from 'react-icons/md'
 import { MdSearch } from 'react-icons/md'
+import { AiFillInfoCircle } from 'react-icons/ai'
 import SearchCountry from './pages/SearchCountry';
 import About from './pages/About';
-import SplashScreen from "./pages/SplashScreen";
+import Profile from "./pages/Profile";
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
         <Route path="/:name" element={<SingleCountry />}></Route>
         <Route path="/About" element={<About />}></Route>
         <Route path="/SearchCountry" element={<SearchCountry />}></Route>
-        <Route exact path="./SplashScreen" element={<SplashScreen/>}></Route>
+        <Route path="/Profile" element={<Profile />}></Route>
       </Routes>
       <footer className="flex justify-around block fixed inset-x-0 bottom-0 z-10 bg-white shadow items-center">
         <NavLink to="/" className="flex flex-col items-center decoration-none font-verdana p-1">
@@ -36,8 +37,12 @@ function App() {
           Search Country
         </NavLink>
         <NavLink to="/About" className="flex flex-col items-center decoration-none font-verdana p-1">
-          <MdGroup className="mb-2 text-xl" />
+          <AiFillInfoCircle className="mb-2 text-xl" />
           About
+        </NavLink>
+        <NavLink to="/Profile" className="flex flex-col items-center decoration-none font-verdana p-1">
+          <MdGroup className="mb-2 text-xl" />
+          Profile
         </NavLink>
       </footer>
     </BrowserRouter>

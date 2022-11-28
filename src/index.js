@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import SplashScreen from "./pages/SplashScreen";
+import SplashScreen from "./components/SplashScreen";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
